@@ -250,7 +250,14 @@
   .stat-card-text { font-weight: 500; font-size: 22px; }
 
   /* ---------- bullet item ---------- */
-  .check { width: 22px; height: 22px; }
+  .check { width: 22px; height: 22px; flex-shrink: 0; }
+  .bullet-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .bullet-list li { display: flex; gap: 17px; align-items: flex-start; font-size: 24px; line-height: 1.5; color: #000; }
+  .bullet-list li .check { margin-top: 6px; }
+  .bullet-list.tight { gap: 8px; }
+  .bullet-list.white-text li { color: #fff; }
+  .body-stack p { margin: 0 0 14px 0; }
+  .body-stack p:last-child { margin-bottom: 0; }
 
   /* ---------- image-with-frame ---------- */
   .photo-shadow { box-shadow: 0 4px 60px rgba(0,0,0,0.32); background: #d9d9d9; }
@@ -481,27 +488,20 @@
   </p>
 
   <!-- challenge body text -->
-  <div class="abs medium black" style="left:978px; top:1151px; width:582px; font-size:24px; line-height:1.5; white-space:pre-wrap;">
-    <p>Across America, religious communities,  particularly synagogues, face growing risks of violence, vandalism, and hate-driven attacks.</p>
-    <p>&nbsp;</p>
+  <div class="abs medium black body-stack" style="left:978px; top:1151px; width:582px; font-size:24px; line-height:1.5;">
+    <p>Across America, religious communities, particularly synagogues, face growing risks of violence, vandalism, and hate-driven attacks.</p>
     <p>One local institution had already experienced multiple credible threats, including drive-by shootings.</p>
-    <p>&nbsp;</p>
-    <p>Leadership faced a haunting realization: Glass    was their weakest point— and the first to be  tested in an attack.</p>
-    <p>&nbsp;</p>
+    <p>Leadership faced a haunting realization: Glass was their weakest point— and the first to be tested in an attack.</p>
     <p>But the mission wasn't just to protect walls. It was to preserve <span class="italic medium">worship without fear</span>. They needed:</p>
   </div>
 
   <!-- challenge bullet list -->
-  <div class="abs medium black" style="left:1013px; top:1688px; width:518px; font-size:24px; line-height:1.5;">
-    <p style="margin-bottom:10px;">Real ballistic and forced-entry protection</p>
-    <p style="margin-bottom:10px;">No bunker look- the space had to remain inviting</p>
-    <p style="margin-bottom:10px;">Discreet deployment that wouldn't alarm congregants</p>
-    <p>Respectful crews trained to work in sacred settings</p>
-  </div>
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:978px; top:1694px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:978px; top:1742px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:978px; top:1824px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:978px; top:1906px;" />
+  <ul class="abs bullet-list" style="left:978px; top:1700px; width:560px;">
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Real ballistic and forced-entry protection</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>No bunker look- the space had to remain inviting</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Discreet deployment that wouldn't alarm congregants</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Respectful crews trained to work in sacred settings</span></li>
+  </ul>
 
   <!-- challenge image (rect70) -->
   <div class="abs" style="left:374px; top:1328px; width:531px; height:629px;" class="photo-shadow">
@@ -534,18 +534,13 @@
   </p>
 
   <!-- Entry Reinforcement -->
-  <div class="abs" style="left:356px; top:2637px; width:612px; display:flex; flex-direction:column; gap:20px;">
-    <p class="bebas black" style="font-size:45px; line-height:1;">Entry Reinforcement</p>
-    <div style="position:relative; padding-top:10px;">
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:10px;" />
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:126px;" />
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:207px;" />
-      <div style="margin-left:35px; font-size:24px; line-height:1.5; color:#000; width:553px; white-space:pre-wrap;">
-        <p style="margin-bottom:10px;">Installed UL752 <span class="bold">Level 3 Bullet-Resistant Glass</span> on main doors- Stops most high-caliber handgun threats, including .44 Magnum</p>
-        <p style="margin-bottom:10px;">Rebuilt and anchored door frames for       forced-entry resistance</p>
-        <p>Timed installation to avoid services and community events</p>
-      </div>
-    </div>
+  <div class="abs" style="left:356px; top:2637px; width:612px;">
+    <p class="bebas black" style="font-size:45px; line-height:1; margin-bottom:24px;">Entry Reinforcement</p>
+    <ul class="bullet-list" style="width:590px;">
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Installed UL752 <span class="bold">Level 3 Bullet-Resistant Glass</span> on main doors- Stops most high-caliber handgun threats, including .44 Magnum</span></li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Rebuilt and anchored door frames for forced-entry resistance</span></li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Timed installation to avoid services and community events</span></li>
+    </ul>
   </div>
 
   <!-- Entry Reinforcement image (rect72) -->
@@ -556,25 +551,24 @@
   <img class="abs badge-rotated" src="assets/rect84-badge.png" alt="" style="left:1397px; top:2814.5px; width:152px; height:153px;" />
 
   <!-- Window Protection -->
-  <p class="abs bebas black" style="left:973px; top:3094px; font-size:45px; line-height:1; width:572px;">Window Protection</p>
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:973px; top:3166px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:973px; top:3249px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:1012px; top:3341px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:1012px; top:3388px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:1012px; top:3436px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:973px; top:3493px;" />
-  <div class="abs black" style="left:1012px; top:3159px; width:533px; font-size:24px; line-height:1.5; white-space:pre-wrap;">
-    <p style="margin-bottom:10px;">Applied Level <span class="bold">2 Ballistic Glass</span> to key              high-risk windows</p>
-    <p>Installed <span class="bold">8mil Security Film + Wet Glaze Anchoring</span> elsewhere to:</p>
+  <div class="abs" style="left:973px; top:3094px; width:572px;">
+    <p class="bebas black" style="font-size:45px; line-height:1; margin-bottom:24px;">Window Protection</p>
+    <ul class="bullet-list">
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Applied Level <span class="bold">2 Ballistic Glass</span> to key high-risk windows</span></li>
+      <li>
+        <img class="check" src="assets/icon-check.svg" alt="" />
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <span>Installed <span class="bold">8mil Security Film + Wet Glaze Anchoring</span> elsewhere to:</span>
+          <ul class="bullet-list tight" style="margin-left:32px;">
+            <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Delay break-ins by 2–3 minutes</span></li>
+            <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Prevent glass shatter</span></li>
+            <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Maintain clean, discreet appearance</span></li>
+          </ul>
+        </div>
+      </li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Integrated <span class="bold">privacy tinting</span></span></li>
+    </ul>
   </div>
-  <div class="abs black nowrap" style="left:1044px; top:3336px; font-size:24px; line-height:1.5;">
-    <p style="margin-bottom:10px;">Delay break-ins by 2–3 minutes</p>
-    <p style="margin-bottom:10px;">Prevent glass shatter</p>
-    <p>Maintain clean, discreet appearance</p>
-  </div>
-  <p class="abs black nowrap" style="left:1012px; top:3486px; font-size:24px; line-height:1.5;">
-    Integrated <span class="bold">privacy tinting</span>
-  </p>
 
   <!-- Window Protection image (rect73) -->
   <div class="abs" style="left:365px; top:3104px; width:542px; height:401px; box-shadow:0 4px 60px rgba(0,0,0,0.32); background:#d9d9d9;">
@@ -584,20 +578,14 @@
   <img class="abs badge-rotated" src="assets/rect84-badge.png" alt="" style="left:763px; top:3360px; width:152px; height:153px;" />
 
   <!-- Discreet Execution -->
-  <div class="abs" style="left:356px; top:3659px; width:612px; display:flex; flex-direction:column; gap:20px;">
-    <p class="bebas black" style="font-size:45px; line-height:1;">Discreet Execution</p>
-    <div style="position:relative; padding-top:8px;">
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:8px;" />
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:51px;" />
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:99px;" />
-      <img class="check" src="assets/icon-check.svg" alt="" style="position:absolute; left:0; top:182px;" />
-      <div style="margin-left:36px; font-size:24px; line-height:1.5; color:#000; width:464px;">
-        <p style="margin-bottom:10px;">All teams arrived in <span class="bold">unmarked vehicles</span></p>
-        <p style="margin-bottom:10px;">No visible logos, uniforms, or equipment</p>
-        <p style="margin-bottom:10px;">Crews worked quietly, professionally, and with deep respect</p>
-        <p>No branding, no disruption, no attention drawn</p>
-      </div>
-    </div>
+  <div class="abs" style="left:356px; top:3659px; width:612px;">
+    <p class="bebas black" style="font-size:45px; line-height:1; margin-bottom:24px;">Discreet Execution</p>
+    <ul class="bullet-list" style="width:500px;">
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>All teams arrived in <span class="bold">unmarked vehicles</span></span></li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>No visible logos, uniforms, or equipment</span></li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Crews worked quietly, professionally, and with deep respect</span></li>
+      <li><img class="check" src="assets/icon-check.svg" alt="" /><span>No branding, no disruption, no attention drawn</span></li>
+    </ul>
   </div>
 
   <!-- Discreet Execution image (rect74) -->
@@ -618,21 +606,16 @@
   </p>
 
   <!-- Why It Worked text -->
-  <div class="abs black" style="left:990px; top:4424px; width:518px; font-size:24px; line-height:1.5; white-space:pre-wrap;">
+  <div class="abs black body-stack" style="left:990px; top:4424px; width:518px; font-size:24px; line-height:1.5;">
     <p>Security upgrades in houses of worship walk a razor's edge. Too visible, and you invite fear. Too hidden, and you risk exposure.</p>
-    <p>&nbsp;</p>
     <p>Starmor found the balance:</p>
   </div>
-  <div class="abs" style="left:990px; top:4641px; width:488px; font-size:24px; line-height:1.5; color:#000;">
-    <p class="bold" style="margin-bottom:10px;">No fortress aesthetic</p>
-    <p class="bold" style="margin-bottom:10px;">No panic from the congregation</p>
-    <p class="bold" style="margin-bottom:10px;">Just layers of real, life-saving defense</p>
-    <p>Installed with reverence, precision, and zero disruption</p>
-  </div>
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:990px; top:4646px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:990px; top:4695px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:990px; top:4741px;" />
-  <img class="abs check" src="assets/icon-check.svg" alt="" style="left:990px; top:4787px;" />
+  <ul class="abs bullet-list" style="left:990px; top:4620px; width:518px;">
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span class="bold">No fortress aesthetic</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span class="bold">No panic from the congregation</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span class="bold">Just layers of real, life-saving defense</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Installed with reverence, precision, and zero disruption</span></li>
+  </ul>
 
   <!-- Why It Worked image (rect71) -->
   <div class="abs" style="left:394px; top:4438px; width:531px; height:393px;">
@@ -648,27 +631,21 @@
     <img class="bg" src="assets/rect62-outcome-bg.png" alt="" />
   </div>
 
-  <p class="abs bold uppercase white center" style="left:50%; top:5115px; transform:translateX(-50%); font-size:25px; line-height:1; letter-spacing:10px; width:305px;">
+  <p class="abs bold uppercase white nowrap" style="left:380px; top:5115px; font-size:25px; line-height:1; letter-spacing:10px;">
     The Outcome:
   </p>
-  <div class="abs bebas gold-text-2" style="left:376px; top:5159.95px; width:550px; font-size:75px; line-height:1; white-space:pre-wrap;">
-    <p>Quiet Strength,</p>
-    <p>Real Peace of Mind</p>
+  <div class="abs bebas gold-text-2" style="left:376px; top:5160px; font-size:75px; line-height:0.95; white-space:nowrap;">
+    Quiet Strength,<br>Real Peace of Mind
   </div>
 
   <!-- outcome bullets -->
-  <img class="abs check" src="assets/icon-check2.svg" alt="" style="left:379px; top:5336.77px;" />
-  <img class="abs check" src="assets/icon-check3.svg" alt="" style="left:379px; top:5418.69px;" />
-  <img class="abs check" src="assets/icon-check4.svg" alt="" style="left:379px; top:5498.13px;" />
-  <img class="abs check" src="assets/icon-check5.svg" alt="" style="left:379px; top:5582.13px;" />
-  <img class="abs check" src="assets/icon-check5.svg" alt="" style="left:379px; top:5664.13px;" />
-  <div class="abs white" style="left:419px; top:5329.13px; width:476px; font-size:24px; line-height:1.5;">
-    <p style="margin-bottom:10px;">Congregants now worship with <span class="bold">greater peace and confidence</span></p>
-    <p style="margin-bottom:10px;">Exterior still feels like home— but is<span class="bold"> tactically hardened</span></p>
-    <p style="margin-bottom:10px;">Faith leaders met new threat standards without altering sacred identity</p>
-    <p style="margin-bottom:10px;">Multiple sites now <span class="bold">resist intrusion and gunfire </span>without looking militarized</p>
-    <p>Zero PR fallout, zero visual disruption, zero spiritual compromise</p>
-  </div>
+  <ul class="abs bullet-list white-text" style="left:379px; top:5340px; width:516px;">
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Congregants now worship with <span class="bold">greater peace and confidence</span></span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Exterior still feels like home— but is <span class="bold">tactically hardened</span></span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Faith leaders met new threat standards without altering sacred identity</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Multiple sites now <span class="bold">resist intrusion and gunfire</span> without looking militarized</span></li>
+    <li><img class="check" src="assets/icon-check.svg" alt="" /><span>Zero PR fallout, zero visual disruption, zero spiritual compromise</span></li>
+  </ul>
 
   <!-- outcome image (rect69) -->
   <div class="abs" style="left:940px; top:5278.08px; width:592px; height:433.553px; box-shadow:0 4px 60px rgba(0,0,0,0.32); background:#d9d9d9;">
